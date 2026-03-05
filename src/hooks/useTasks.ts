@@ -4,7 +4,7 @@ import * as taskRepository from '../database/taskRepository';
 import { TaskFilter, Task } from "../types/task";
 
 interface UseTaskReturn {
-    tasks: Task
+    tasks: Task[]
     allTasksCount: number
     pendingTasksCount: number
     completedTasksCount: number
@@ -16,7 +16,7 @@ interface UseTaskReturn {
 }
 
 export function useTasks(): UseTaskReturn {
-    const [tasks, setTasks] = useState<MyTask[]>([])
+    const [tasks, setTasks] = useState<Task[]>([])
     const [filter, setFilter] = useState<TaskFilter>('all')
     const [loading, setLoading] = useState(true)
 
