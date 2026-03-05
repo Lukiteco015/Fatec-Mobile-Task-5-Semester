@@ -6,7 +6,7 @@ export interface Task {
     createdAt: string
 }
 
-export type TaskFilter = 'ali' | 'pending' | 'completed'
+export type TaskFilter = 'all' | 'pending' | 'completed'
 
 export interface CreateTaskInput {
     title: string

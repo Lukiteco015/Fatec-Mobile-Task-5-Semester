@@ -1,6 +1,6 @@
 import { CreateTaskInput, UpdateTaskInput } from "../types/task";
 import { getDatabase } from "./database";
-import { Task } from "react-native";
+import { Task } from "../types/task";
 
 export async function getTasks(): Promise<Task[]> {
     const db = await getDatabase()
